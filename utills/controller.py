@@ -1,0 +1,9 @@
+def get_user_info(users_data: list[dict]) -> None:
+    for user in users_data:
+        print(f'Twój znajomy: {user["name"]} z {user["location"]} opublikował {user["posts"]} postów')
+
+def add_user(users_data: list[dict]) -> None:
+    tmp_name:str = input('Podaj imię: ')
+    tmp_location:str = input('Podaj miejscowość: ')
+    tmp_posts:int = int(input('Podaj liczbę postów: '))
+    users_data.append({'name': tmp_name, 'location': tmp_location, 'posts': tmp_posts})
